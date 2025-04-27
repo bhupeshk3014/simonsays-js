@@ -39,6 +39,7 @@ function levelUp() {
     let randColor = btns[randInx];
     let randBtn = document.querySelector(`.${randColor}`);
     gameSeq.push(randColor);
+    console.log(gameSeq);
     gameFlash(randBtn);
 }
 
@@ -51,8 +52,8 @@ function checkAns(idx) {
     }
     else {
         h2.innerHTML = "Game Over! Press any key to restart.";
+        reset();
     }
-    reset();
 }
 
 function btnPress() {
