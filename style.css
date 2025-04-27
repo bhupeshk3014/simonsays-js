@@ -1,41 +1,94 @@
+/* === Basic Styling === */
 body {
     text-align: center;
+    background: #e8e6e8;
+    background: radial-gradient(circle, rgba(232, 230, 232, 1) 0%, rgba(108, 153, 204, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    padding: 0;
 }
 
+/* === Heading Styling === */
+h1, h2, h3 {
+    margin: 10px 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+/* === Game Buttons === */
 .btn {
-    height: 200px;
-    width: 200px;
+    width: 40vw;    
+    height: 40vw;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 20%;
     border: 10px solid #000;
     margin: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
 }
 
 .btn-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
+/* === Button Colors === */
 .yellow {
     background-color: #FFBF00;
 }
-
 .red {
     background-color: #DC143C;
 }
-
 .green {
     background-color: #90EE90;
 }
-
 .purple {
     background-color: #D8BFD8;
 }
 
+/* === Flash Animations === */
 .flash {
+    opacity: 0.5;
+    transform: scale(1.1);
     background-color: white;
 }
 
 .userFlash {
-    background: #2A7B9B;
-    background: radial-gradient(circle, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-}   
+    transform: scale(0.9);
+    background: radial-gradient(circle, rgba(42,123,155,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+    transition: all 0.2s ease;
+}
+
+/* === Game Over Animation === */
+body.game-over {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+/* === Responsive Text Size === */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}
