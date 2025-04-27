@@ -14,6 +14,7 @@ It was built to sharpen front-end development skills such as **DOM manipulation*
 
 ## 🚀 Live Demo
 
+👉 [Play Simon Says JS Live Here](https://bhupeshk3014.github.io/simonsays-js/)
 
 ---
 
