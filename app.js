@@ -39,7 +39,7 @@ function levelUp() {
     let randColor = btns[randInx];
     let randBtn = document.querySelector(`.${randColor}`);
     gameSeq.push(randColor);
-    console.log(gameSeq);
+    // console.log(gameSeq);
     gameFlash(randBtn);
 }
 
@@ -51,7 +51,11 @@ function checkAns(idx) {
         }   
     }
     else {
-        h2.innerHTML = "Game Over! Press any key to restart.";
+        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br>Press any key to restart.`;
+        document.querySelector("body").style.backgroundColor = "red";
+        setTimeout( function() {
+            document.querySelector("body").style.backgroundColor = "white";
+        }, 150);
         reset();
     }
 }
