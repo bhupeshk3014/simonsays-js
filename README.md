@@ -44,12 +44,12 @@ It was built to sharpen front-end development skills such as **DOM manipulation*
 
 ## 🎮 How to Play
 
-1. Press any key to start the game.
+1. Press the **Start** button to begin the game.
 2. Watch carefully as the game flashes a random color.
-3. Click the buttons in the exact same sequence.
-4. Each new level adds an extra color to the sequence.
-5. Make a mistake? Game over! Your score will be displayed.
-6. Try again to beat your **High Score**! 🏆
+3. Click the colored buttons in the **same sequence** shown.
+4. Each new level adds **one more color** to the sequence.
+5. If you make a mistake, it's **Game Over** — your score and High Score will be displayed.
+6. Press **Start** again to try and beat your **High Score**! 🏆
 
 ---
 

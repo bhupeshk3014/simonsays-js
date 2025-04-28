@@ -18,12 +18,26 @@ highScoreTitle.innerText = `High Score: ${highScore}`; // ✅ Now this is after 
 // ========================
 // Start Game on Keypress
 // ========================
-document.addEventListener("keypress", function () {
+// document.addEventListener("keypress", function () {
+//     if (!started) {
+//         started = true;
+//         levelUp(); // Start the game by generating the first color
+//     }
+// });
+
+// ========================
+// Start Game on Start Button Click
+// ========================
+const startBtn = document.getElementById("start-btn");
+
+startBtn.addEventListener("click", function () {
     if (!started) {
         started = true;
-        levelUp(); // Start the game by generating the first color
+        levelUp(); // Start the game
+        startBtn.style.display = "none"; // Hide Start button after starting
     }
 });
+
 
 // ========================
 // Flash Animation for Game Sequence
@@ -88,7 +102,7 @@ function checkAns(idx) {
         }
 
         highScoreTitle.innerText = `High Score: ${highScore}`; // Update high score on page
-        h2.innerHTML = `Game Over! Your score was <b>${Math.max(0, level - 1)}</b> <br>Press any key to restart.`;
+        h2.innerHTML = `Game Over! Your score was <b>${Math.max(0, level - 1)}</b><br>Press Start to play again.`;
 
         reset(); // Reset game variables
     }
@@ -123,6 +137,7 @@ function reset() {
     userSeq = [];
     level = 0;
     started = false;
+    startBtn.style.display = "inline-block"; // Show Start button again after game over
 }
 
 // ========================
